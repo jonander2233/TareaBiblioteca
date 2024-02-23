@@ -7,10 +7,10 @@ public class Libro {
 
     private String titulo;
     private String autor;
+    private Date anoPublicacion;
     private int nPag;
     private int isbn;
     private int stock;
-    private Date anoPublicacion;
 
     public Libro(String titulo, String autor, int nPag, int stock, Date anoPublicacion) {
         isbn = autoincrement++;
@@ -20,12 +20,18 @@ public class Libro {
         this.stock = stock;
         this.anoPublicacion = anoPublicacion;
     }
-
-    public void reducirCantidad (){
-
+    public int consultarIsbn (){
+        return isbn;
     }
-    public void aumentarCantidad (){
+    public boolean reducirCantidad (int cantidad){
+        if (cantidad > stock)
+            return false;
+        stock = stock - cantidad;
+        return true;
+    }
+    public void aumentarCantidad (int cantidad){
 
+        stock = stock + cantidad;
     }
     public int consultarCantidad (){
         return stock;

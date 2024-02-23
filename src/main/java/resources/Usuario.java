@@ -16,4 +16,7 @@ public class Usuario {
 
         }
     }
+    public int consultarId (){
+        return id;
+    }
 }

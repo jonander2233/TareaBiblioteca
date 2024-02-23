@@ -7,6 +7,7 @@ public class Biblioteca {
     private Usuario[] usuarios;
     private int capacidadLibros;
     private int capacidadUsuarios;
+
     Faker faker = new Faker();
 
 
@@ -26,5 +27,16 @@ public class Biblioteca {
             libros[i] = new Libro(faker.book().title(),faker.book().author(),faker.random().nextInt(50,
                     300),faker.random().nextInt(5,50),faker.date().birthday() );
         }
+    }
+    public void prestarLibro(int isbn,int idUsuario){
+        for (int i = 0; i < libros.length; i++) {
+            if (isbn == libros[i].consultarIsbn()){
+                libros[i].reducirCantidad(1);
+                usuarios[i].consultarId();
+            }
+        }
+    }
+    public void recibirLibro(){
+
     }
 }
