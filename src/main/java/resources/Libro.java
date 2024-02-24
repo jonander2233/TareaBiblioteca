@@ -29,9 +29,9 @@ public class Libro {
         stock = stock - cantidad;
         return true;
     }
-    public void aumentarCantidad (int cantidad){
+    public void aumentarCantidad (){
 
-        stock = stock + cantidad;
+        stock = stock + 1;
     }
     public int consultarCantidad (){
         return stock;

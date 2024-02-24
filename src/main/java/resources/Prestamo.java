@@ -11,7 +11,10 @@ public class Prestamo {
         this.fechaPrestamo = fechaPrestamo;
         this.idUsuario = idUsuario;
     }
-    public Prestamo getPrestamo(){
-        return this;
+    public void prestarLibro(int idLibro){
+
+    }
+    public void devolverLibro(int idLibro){
+
     }
 }
