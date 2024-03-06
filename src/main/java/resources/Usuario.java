@@ -11,10 +11,18 @@ public class Usuario {
         this.nombre = nombre;
         autoincrement++;
     }
-    public void consultarPrestamos (int id){
+
+    public void consultarPrestamos(int id) {
         for (int i = 0; i < historialPrestamos.length; i++) {
 
         }
+    }
+    public void devolverLibro(int idLibro){
+
+    }
+
+    public void prestarLibro(int idLibro){
+
     }
     public int consultarId (){
         return id;
