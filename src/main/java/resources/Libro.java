@@ -3,7 +3,7 @@ package resources;
 import java.util.Date;
 
 public class Libro {
-    private static int autoincrement = 10000;
+    private static int autoincrement = 1000;
 
     private String titulo;
     private String autor;

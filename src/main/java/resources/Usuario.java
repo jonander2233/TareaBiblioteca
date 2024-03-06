@@ -19,4 +19,12 @@ public class Usuario {
     public int consultarId (){
         return id;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nombre='" + nombre + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }

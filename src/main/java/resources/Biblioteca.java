@@ -39,4 +39,19 @@ public class Biblioteca {
     public void recibirLibro(){
 
     }
+    public String consultarUsuario(int id){
+        for (int i = 0; i < usuarios.length; i++) {
+            if (id == usuarios[i].consultarId()){
+                return usuarios[i].toString();
+            }
+        }
+        return ("no existe el usuario con id"+id);
+    }
+    public String consultarTodos(){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < usuarios.length; i++) {
+            sb.append(usuarios[i]).append("\n");
+        }
+        return sb.toString();
+    }
 }
