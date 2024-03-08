@@ -12,6 +12,9 @@ public class Libro {
     private int isbn;
     private int stock;
 
+    public Libro() {
+    }
+
     public Libro(String titulo, String autor, int nPag, int stock, Date anoPublicacion) {
         isbn = autoincrement++;
         this.titulo = titulo;

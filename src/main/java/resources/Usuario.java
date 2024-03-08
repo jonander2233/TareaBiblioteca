@@ -1,10 +1,19 @@
 package resources;
 
+import librerias.GenericDynamicArray;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Usuario {
     private static int autoincrement = 1;
+    private static int autoincrementPrestamos = 0;
     private String nombre;
     private int id;
-    Prestamo[] historialPrestamos = new Prestamo[50];
+    private GenericDynamicArray<Prestamo> historialPrestamos = new GenericDynamicArray<Prestamo>(5);
+    private int MAX_PRESTAMOS = 5;
+    public Usuario() {
+    }
 
     public Usuario(String nombre) {
         id = autoincrement;
@@ -13,17 +22,21 @@ public class Usuario {
     }
 
     public void consultarPrestamos(int id) {
-        for (int i = 0; i < historialPrestamos.length; i++) {
 
-        }
     }
     public void devolverLibro(int idLibro){
 
     }
 
-    public void prestarLibro(int idLibro){
-
+    public boolean prestarLibro(Libro libro){
+        if (historialPrestamos.size()>=MAX_PRESTAMOS){
+         return false;
+        }
+        Prestamo prestamo = new Prestamo(libro);
+        historialPrestamos.add(prestamo);
+        return true;
     }
+
     public int consultarId (){
         return id;
     }
